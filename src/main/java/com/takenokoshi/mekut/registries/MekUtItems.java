@@ -2,8 +2,11 @@ package com.takenokoshi.mekut.registries;
 
 import com.takenokoshi.mekut.core.MekUtConstants;
 import com.takenokoshi.mekut.item.ItemSupplierItem;
+import com.takenokoshi.mekut.item.ItemUniversalStorageTierInstaller;
 import com.takenokoshi.mekut.item.MekUtBasicItem;
 import com.takenokoshi.mekut.item.XpCrystalItem;
+import com.takenokoshi.mekut.tier.UniversalStorageTier;
+
 import mekanism.api.text.EnumColor;
 import mekanism.common.registration.impl.ItemDeferredRegister;
 import mekanism.common.registration.impl.ItemRegistryObject;
@@ -60,6 +63,19 @@ public class MekUtItems {
     public static final ItemRegistryObject<ItemSupplierItem> COBBLESTONE_SUPPLIER = ITEMS.registerItem(
             "cobblestone_supplier",
             ItemSupplierItem.getCreator(Items.COBBLESTONE));
+
+    public static final ItemRegistryObject<ItemUniversalStorageTierInstaller> DIGITAL_UNIVERSAL_STORAGE_TIER_INSTALLER = ITEMS
+            .registerItem("digital_universal_storage_tier_installer",
+                    props -> new ItemUniversalStorageTierInstaller(props, UniversalStorageTier.NONE,
+                            UniversalStorageTier.DIGITAL));
+    public static final ItemRegistryObject<ItemUniversalStorageTierInstaller> STANDARD_UNIVERSAL_STORAGE_TIER_INSTALLER = ITEMS
+            .registerItem("standard_universal_storage_tier_installer",
+                    props -> new ItemUniversalStorageTierInstaller(props, UniversalStorageTier.DIGITAL,
+                            UniversalStorageTier.STANDARD));
+    public static final ItemRegistryObject<ItemUniversalStorageTierInstaller> AUGMENT_UNIVERSAL_STORAGE_TIER_INSTALLER = ITEMS
+            .registerItem("augment_universal_storage_tier_installer",
+                    props -> new ItemUniversalStorageTierInstaller(props, UniversalStorageTier.STANDARD,
+                            UniversalStorageTier.AUGMENT));
 
     public static final ItemRegistryObject<Item> RAW_AMETHYST = ITEMS.register("raw_amethyst");
     public static final ItemRegistryObject<Item> RAW_CERTUS_QUARTZ = ITEMS.register("raw_certus_quartz");

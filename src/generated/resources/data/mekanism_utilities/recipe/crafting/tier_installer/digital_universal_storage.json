@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mekanism_utilities:digital_control_circuit"
+    },
+    "B": {
+      "item": "mekanism:dynamic_tank"
+    },
+    "C": {
+      "tag": "c:ingots/bronze"
+    },
+    "D": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "CAC",
+    "BDB",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanism_utilities:digital_universal_storage_tier_installer"
+  }
+}

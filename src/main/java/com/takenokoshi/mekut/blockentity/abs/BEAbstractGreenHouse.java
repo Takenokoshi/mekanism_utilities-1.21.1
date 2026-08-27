@@ -11,12 +11,11 @@ import org.jetbrains.annotations.Nullable;
 import com.takenokoshi.mekaddonlib.blockentity.base.BEMultiScaledProgressMachine;
 import com.takenokoshi.mekaddonlib.blockentity.component.EjectorComponentUtils;
 import com.takenokoshi.mekaddonlib.blockentity.component.RelativeEjectionTargetModifier;
-import com.takenokoshi.mekaddonlib.blockentity.interfaces.IHasGuiSizeOffset;
 import com.takenokoshi.mekaddonlib.inventory.slot.LimitChangedInputInventorySlot;
 import com.takenokoshi.mekaddonlib.inventory.slot.LimitChangedOutputInventorySlot;
 import com.takenokoshi.mekaddonlib.recipe.cached.ICachedRecipe;
 import com.takenokoshi.mekaddonlib.recipe.type.IMekALRecipeTypeProvider;
-import com.takenokoshi.mekut.blockentity.interfaces.IHasMachineEnergyContainer;
+import com.takenokoshi.mekut.blockentity.interfaces.machine.IGreenHouse;
 import com.takenokoshi.mekut.inventory.slot.FluidFillOrSupplierSlot;
 import com.takenokoshi.mekut.recipe.cached.GreenHouseCachedRecipe;
 import com.takenokoshi.mekut.recipe.input.AdvancedFluidInputHandler;
@@ -66,8 +65,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.BlockCapability;
 
 public abstract class BEAbstractGreenHouse extends BEMultiScaledProgressMachine<GreenHouseRecipe>
-        implements ITripleInputRecipeLookupHandler.IGreenHouseRecipeLookupHandler, IHasMachineEnergyContainer,
-        IHasGuiSizeOffset, IBoundingBlock {
+        implements ITripleInputRecipeLookupHandler.IGreenHouseRecipeLookupHandler, IGreenHouse, IBoundingBlock {
 
     public static final List<RecipeError> TRACKED_ERROR_TYPES = List.of(
             RecipeError.NOT_ENOUGH_ENERGY,

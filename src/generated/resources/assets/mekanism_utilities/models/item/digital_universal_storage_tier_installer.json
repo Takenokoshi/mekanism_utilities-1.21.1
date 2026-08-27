@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mekanism_utilities:item/tier_installer/digital_universal_storage"
+  }
+}

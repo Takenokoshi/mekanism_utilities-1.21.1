@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mekanism:personal_chest"
+    },
+    "B": {
+      "item": "mekanism:dynamic_tank"
+    },
+    "C": {
+      "tag": "c:ingots/bronze"
+    }
+  },
+  "pattern": [
+    "CBC",
+    "BAB",
+    "CBC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanism_utilities:universal_storage"
+  }
+}

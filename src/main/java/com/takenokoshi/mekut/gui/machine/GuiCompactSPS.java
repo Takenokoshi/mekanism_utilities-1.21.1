@@ -2,9 +2,7 @@ package com.takenokoshi.mekut.gui.machine;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactSPS;
-import com.takenokoshi.mekut.recipe_viewer.type.MekUtRecipeViewerRecipeType;
-
+import com.takenokoshi.mekut.blockentity.interfaces.machine.IMekUtChemicalToChemicalMachine;
 import mekanism.api.recipes.cache.CachedRecipe.OperationTracker.RecipeError;
 import mekanism.client.gui.GuiConfigurableTile;
 import mekanism.client.gui.element.bar.GuiHorizontalPowerBar;
@@ -16,11 +14,12 @@ import mekanism.client.gui.element.tab.GuiEnergyTab;
 import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.common.inventory.container.tile.MekanismTileContainer;
 import mekanism.common.inventory.warning.WarningTracker.WarningType;
+import mekanism.common.tile.prefab.TileEntityConfigurableMachine;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 
-public class GuiCompactSPS<BE extends BEAbstractCompactSPS> extends GuiConfigurableTile<BE, MekanismTileContainer<BE>> {
+public class GuiCompactSPS<BE extends TileEntityConfigurableMachine & IMekUtChemicalToChemicalMachine> extends GuiConfigurableTile<BE, MekanismTileContainer<BE>> {
 
     public GuiCompactSPS(MekanismTileContainer<BE> container, Inventory inv, Component title) {
         super(container, inv, title);
@@ -33,16 +32,16 @@ public class GuiCompactSPS<BE extends BEAbstractCompactSPS> extends GuiConfigura
         addRenderableWidget(new GuiHorizontalPowerBar(this, tile.getEnergyContainer(), 115, 75))
                   .warning(WarningType.NOT_ENOUGH_ENERGY, tile.getWarningCheck(RecipeError.NOT_ENOUGH_ENERGY));
         addRenderableWidget(new GuiEnergyTab(this, tile.getEnergyContainer(), tile::getEnergyUsed));
-        addRenderableWidget(new GuiChemicalGauge(() -> tile.getInputTank(), () -> tile.getChemicalTanks(null),
+        addRenderableWidget(new GuiChemicalGauge(tile::getInputTank, () -> tile.getChemicalTanks(null),
                 GaugeType.STANDARD, this, 25, 13))
                 .warning(WarningType.NO_MATCHING_RECIPE, tile.getWarningCheck(RecipeError.NOT_ENOUGH_INPUT));
-        addRenderableWidget(new GuiChemicalGauge(() -> tile.getOutputTank(), () -> tile.getChemicalTanks(null),
+        addRenderableWidget(new GuiChemicalGauge(tile::getOutputTank, () -> tile.getChemicalTanks(null),
                 GaugeType.STANDARD, this, 133, 13))
                 .warning(WarningType.NO_SPACE_IN_OUTPUT, tile.getWarningCheck(RecipeError.NOT_ENOUGH_OUTPUT_SPACE));
-        addRenderableWidget(new GuiProgress(tile::getActive, ProgressType.LARGE_RIGHT, this, 64, 39))
+        addRenderableWidget(new GuiProgress(tile::getScaledProgress, ProgressType.LARGE_RIGHT, this, 64, 39))
                 .warning(WarningType.INPUT_DOESNT_PRODUCE_OUTPUT,
                         tile.getWarningCheck(RecipeError.INPUT_DOESNT_PRODUCE_OUTPUT))
-                .recipeViewerCategories(new IRecipeViewerRecipeType[] { MekUtRecipeViewerRecipeType.SPS });
+                .recipeViewerCategories(new IRecipeViewerRecipeType[] { tile.recipeViewerType() });
     }
 
     @Override

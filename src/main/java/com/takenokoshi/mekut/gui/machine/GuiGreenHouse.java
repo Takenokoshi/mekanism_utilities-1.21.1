@@ -3,9 +3,7 @@ package com.takenokoshi.mekut.gui.machine;
 import org.jetbrains.annotations.NotNull;
 
 import com.takenokoshi.mekaddonlib.inventory.container.MekALDynamicSizedContainer;
-import com.takenokoshi.mekut.blockentity.abs.BEAbstractGreenHouse;
-import com.takenokoshi.mekut.recipe_viewer.type.MekUtRecipeViewerRecipeType;
-
+import com.takenokoshi.mekut.blockentity.interfaces.machine.IGreenHouse;
 import mekanism.api.recipes.cache.CachedRecipe.OperationTracker.RecipeError;
 import mekanism.client.gui.GuiConfigurableTile;
 import mekanism.client.gui.element.GuiDownArrow;
@@ -17,11 +15,13 @@ import mekanism.client.gui.element.progress.ProgressType;
 import mekanism.client.gui.element.tab.GuiEnergyTab;
 import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.common.inventory.warning.WarningTracker.WarningType;
+import mekanism.common.tile.base.TileEntityMekanism;
+import mekanism.common.tile.interfaces.ISideConfiguration;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 
-public class GuiGreenHouse<BE extends BEAbstractGreenHouse>
+public class GuiGreenHouse<BE extends TileEntityMekanism & ISideConfiguration & IGreenHouse>
         extends GuiConfigurableTile<BE, MekALDynamicSizedContainer<BE>> {
 
     public GuiGreenHouse(MekALDynamicSizedContainer<BE> container, Inventory inv, Component title) {
@@ -49,7 +49,7 @@ public class GuiGreenHouse<BE extends BEAbstractGreenHouse>
         addRenderableWidget(new GuiProgress(tile::getScaledProgress, ProgressType.BAR, this, 86, 38))
                 .warning(WarningType.INPUT_DOESNT_PRODUCE_OUTPUT,
                         tile.getWarningCheck(RecipeError.INPUT_DOESNT_PRODUCE_OUTPUT))
-                .recipeViewerCategories(new IRecipeViewerRecipeType[] { MekUtRecipeViewerRecipeType.GREEN_HOUSE, });
+                .recipeViewerCategories(new IRecipeViewerRecipeType[] { tile.recipeViewerType(), });
     }
 
     @Override

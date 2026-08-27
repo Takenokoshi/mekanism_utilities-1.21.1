@@ -12,8 +12,7 @@ import com.takenokoshi.mekaddonlib.blockentity.base.BEMultiScaledProgressMachine
 import com.takenokoshi.mekaddonlib.recipe.cached.ICachedRecipe;
 import com.takenokoshi.mekaddonlib.recipe.lookup.IMekALRecipeTypedLookupHandler;
 import com.takenokoshi.mekaddonlib.recipe.type.IMekALRecipeTypeProvider;
-import com.takenokoshi.mekut.blockentity.interfaces.IHasMachineEnergyContainer;
-import com.takenokoshi.mekut.blockentity.interfaces.IRecipeViewerTypeProvider;
+import com.takenokoshi.mekut.blockentity.interfaces.machine.IMekUtChemicalToChemicalMachine;
 import com.takenokoshi.mekut.inventory.slot.ChemicalFillConvertOrSupplyingSlot;
 import com.takenokoshi.mekut.recipe.input.AdvancedChemicalInputHandler;
 import com.takenokoshi.mekut.recipe.inputcache.MUSingleInputRecipeCache;
@@ -63,7 +62,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public abstract class BEAbstractCompactSPS extends BEMultiScaledProgressMachine<ChemicalToChemicalRecipe> implements
         IMekALRecipeTypedLookupHandler<ChemicalToChemicalRecipe, MUSingleInputRecipeCache.MUSingleChemical<ChemicalToChemicalRecipe>>,
-        IHasMachineEnergyContainer, IRecipeViewerTypeProvider {
+        IMekUtChemicalToChemicalMachine {
 
     public static final AttachedSideConfig SIDE_CONFIG = Util.make(() -> {
         Map<TransmissionType, LightConfigInfo> configInfo = new EnumMap<>(TransmissionType.class);

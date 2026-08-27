@@ -1,0 +1,11 @@
+{
+  "parent": "mekanism_utilities:block/base/factory_base",
+  "textures": {
+    "factory_tier_decoration": "mekanism_utilities:block/tier_decoration/basic",
+    "front": "mekanism_utilities:block/misc/universal_storage_front",
+    "left": "mekanism_utilities:block/misc/universal_storage_left",
+    "machine_tier_decoration": "mekanism_utilities:block/tier_decoration/basic",
+    "right": "mekanism_utilities:block/misc/universal_storage_right",
+    "up": "mekanism_utilities:block/misc/universal_storage_up"
+  }
+}

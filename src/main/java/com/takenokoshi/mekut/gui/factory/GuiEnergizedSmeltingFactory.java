@@ -2,9 +2,9 @@ package com.takenokoshi.mekut.gui.factory;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.takenokoshi.mekaddonlib.gui.tab.GuiMekALFactorySortingTab;
 import com.takenokoshi.mekaddonlib.inventory.container.MekALDynamicSizedContainer;
 import com.takenokoshi.mekut.blockentity.factory.BEEnergizedSmeltingFactory;
-import com.takenokoshi.mekut.gui.tab.MekUtFactoryGuiSortingTab;
 import com.takenokoshi.mekut.recipe_viewer.type.MekUtRecipeViewerRecipeType;
 
 import mekanism.client.gui.GuiConfigurableTile;
@@ -34,7 +34,7 @@ public class GuiEnergizedSmeltingFactory extends
     @Override
     protected void addGuiElements() {
         super.addGuiElements();
-        addRenderableWidget(new MekUtFactoryGuiSortingTab(this, tile));
+        addRenderableWidget(new GuiMekALFactorySortingTab<>(this, tile));
         addRenderableWidget(new GuiVerticalPowerBar(this, tile.getEnergyContainer(), imageWidth - 12, 16));
         addRenderableWidget(new GuiChemicalBar(this,
                 GuiChemicalBar.getProvider(tile.getXpTank(), tile.getChemicalTanks(null)), 7,

@@ -48,6 +48,10 @@ public class MekUtScreens {
         registerMachineGui(event, MekUtMachines.ITEM_RATIO_SPLITTER, GuiItemRatioSplitter::new);
         registerMachineGui(event, MekUtMachines.FLUID_RATIO_SPLITTER, GuiFluidRatioSplitter::new);
         registerMachineGui(event, MekUtMachines.CHEMICAL_RATIO_SPLITTER, GuiChemicalRatioSplitter::new);
+        registerMachineGui(event, MekUtMachines.UNIVERSAL_STORAGE, GuiUniversalStorage::new);
+        MekUtMachines.UPGRADED_UNIVERSAL_STORAGES.values().forEach(registryObject -> {
+            registerMachineGui(event, registryObject, GuiUniversalStorage::new);
+        });
 
         MekUtMachines.ENERGIZED_SMELTING_FACTORIES.values().forEach(registryObject -> {
             registerMachineGui(event, registryObject, GuiEnergizedSmeltingFactory::new);

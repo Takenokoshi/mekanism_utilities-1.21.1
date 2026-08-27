@@ -82,6 +82,13 @@ public class MekUtItemModelProvider extends ItemModelProvider {
                 .texture("layer0", MekUtConstants.rl("item/supplier/base"));
         simpleItem(MekUtItems.COBBLESTONE_SUPPLIER.get())
                 .texture("layer0", MekUtConstants.rl("item/supplier/cobblestone"));
+
+        simpleItem(MekUtItems.DIGITAL_UNIVERSAL_STORAGE_TIER_INSTALLER.get())
+                .texture("layer0", MekUtConstants.rl("item/tier_installer/digital_universal_storage"));
+        simpleItem(MekUtItems.STANDARD_UNIVERSAL_STORAGE_TIER_INSTALLER.get())
+                .texture("layer0", MekUtConstants.rl("item/tier_installer/standard_universal_storage"));
+        simpleItem(MekUtItems.AUGMENT_UNIVERSAL_STORAGE_TIER_INSTALLER.get())
+                .texture("layer0", MekUtConstants.rl("item/tier_installer/augment_universal_storage"));
     }
 
     public ItemModelBuilder simpleItem(Item item) {

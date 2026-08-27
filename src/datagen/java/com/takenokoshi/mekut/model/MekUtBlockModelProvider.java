@@ -148,6 +148,44 @@ public class MekUtBlockModelProvider extends BlockStateProvider {
                     Mekanism.rl("block/energized_smelter/front"),
                     Mekanism.rl("block/energized_smelter/front_active"));
         });
+
+        MekUtExtrasMachines.EXTRA_SMELTING_FACTORIES.forEach((tier, registryObject) -> {
+            mekUtSimpleFactory(registryObject, true,
+                    "digital", tier.getAdvanceTier().getLowerName(),
+                    "factory/energized_smelting/" + tier.getAdvanceTier().getLowerName(),
+                    Mekanism.rl("block/energized_smelter/front"),
+                    Mekanism.rl("block/energized_smelter/front_active"));
+        });
+        universalStorage(MekUtMachines.UNIVERSAL_STORAGE.getBlock(), "basic", "block/misc/universal_storage/none");
+        MekUtMachines.UPGRADED_UNIVERSAL_STORAGES.forEach((tier, registryObject) -> {
+            universalStorage(registryObject.getBlock(), tier.name, "block/misc/universal_storage/" + tier.name);
+        });
+    }
+
+    protected void universalStorage(
+            BlockRegistryObject<?, ?> registryObject,
+            String tierDecoration,
+            String baseName) {
+        ModelFile inactive = models().withExistingParent(baseName, MekUtConstants.rl("block/base/factory_base"))
+                .texture("up", MekUtConstants.rl("block/misc/universal_storage_up"))
+                .texture("front", MekUtConstants.rl("block/misc/universal_storage_front"))
+                .texture("left", MekUtConstants.rl("block/misc/universal_storage_left"))
+                .texture("right", MekUtConstants.rl("block/misc/universal_storage_right"))
+                .texture("machine_tier_decoration", MekUtConstants.rl("block/tier_decoration/" + tierDecoration))
+                .texture("factory_tier_decoration", MekUtConstants.rl("block/tier_decoration/" + tierDecoration));
+        getVariantBuilder(registryObject.get())
+                .forAllStates(state -> {
+                    Direction facing = state.getValue(
+                            BlockStateProperties.HORIZONTAL_FACING);
+                    return ConfiguredModel.builder()
+                            .modelFile(inactive)
+                            .rotationY(((int) facing.toYRot() + 180) % 360)
+                            .build();
+                });
+
+        simpleBlockItem(
+                registryObject.get(),
+                inactive);
     }
 
     protected void mekUtSimpleFactory(

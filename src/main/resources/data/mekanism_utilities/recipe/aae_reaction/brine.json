@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "advanced_ae"
+    }
+  ],
   "type": "advanced_ae:reaction",
   "input_energy": 100,
   "input_fluid": {

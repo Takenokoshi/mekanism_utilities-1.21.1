@@ -288,6 +288,52 @@ public class CraftingRecipes {
                 .pattern("AIA")
                 .unlockedBy("unlock", has.apply(MekUtItems.ELASTIC_ALLOY))
                 .save(output, MekUtConstants.rl("crafting/machine/chemical_ratio_splitter"));
+        ShapedRecipeBuilder
+                .shaped(RecipeCategory.MISC, new ItemStack(MekUtMachines.UNIVERSAL_STORAGE, 1))
+                .define('A', MekanismBlocks.PERSONAL_CHEST)
+                .define('B', MekanismBlocks.DYNAMIC_TANK)
+                .define('C', MekanismTags.Items.INGOTS_BRONZE)
+                .pattern("CBC")
+                .pattern("BAB")
+                .pattern("CBC")
+                .unlockedBy("unlock", has.apply(MekanismBlocks.PERSONAL_CHEST))
+                .save(output, MekUtConstants.rl("crafting/machine/universal_storage"));
+        ShapedRecipeBuilder
+                .shaped(RecipeCategory.MISC,
+                        new ItemStack(MekUtItems.DIGITAL_UNIVERSAL_STORAGE_TIER_INSTALLER.getDelegate(), 1))
+                .define('A', MekUtItems.DIGITAL_CONTROL_CIRCUIT)
+                .define('B', MekanismBlocks.DYNAMIC_TANK)
+                .define('C', MekanismTags.Items.INGOTS_BRONZE)
+                .define('D', ItemTags.PLANKS)
+                .pattern("CAC")
+                .pattern("BDB")
+                .pattern("CCC")
+                .unlockedBy("unlock", has.apply(MekUtItems.DIGITAL_CONTROL_CIRCUIT))
+                .save(output, MekUtConstants.rl("crafting/tier_installer/digital_universal_storage"));
+        ShapedRecipeBuilder
+                .shaped(RecipeCategory.MISC,
+                        new ItemStack(MekUtItems.STANDARD_UNIVERSAL_STORAGE_TIER_INSTALLER.getDelegate(), 1))
+                .define('A', MekUtItems.STANDARD_CONTROL_CIRCUIT)
+                .define('B', MekanismBlocks.DYNAMIC_TANK)
+                .define('C', MekanismTags.Items.INGOTS_BRONZE)
+                .define('D', ItemTags.PLANKS)
+                .pattern("CAC")
+                .pattern("BDB")
+                .pattern("CCC")
+                .unlockedBy("unlock", has.apply(MekUtItems.DIGITAL_CONTROL_CIRCUIT))
+                .save(output, MekUtConstants.rl("crafting/tier_installer/standard_universal_storage"));
+        ShapedRecipeBuilder
+                .shaped(RecipeCategory.MISC,
+                        new ItemStack(MekUtItems.AUGMENT_UNIVERSAL_STORAGE_TIER_INSTALLER.getDelegate(), 1))
+                .define('A', MekUtItems.AUGMENT_CONTROL_CIRCUIT)
+                .define('B', MekanismBlocks.DYNAMIC_TANK)
+                .define('C', MekanismTags.Items.INGOTS_BRONZE)
+                .define('D', ItemTags.PLANKS)
+                .pattern("CAC")
+                .pattern("BDB")
+                .pattern("CCC")
+                .unlockedBy("unlock", has.apply(MekUtItems.DIGITAL_CONTROL_CIRCUIT))
+                .save(output, MekUtConstants.rl("crafting/tier_installer/augment_universal_storage"));
 
         NORMAL_MACHINES.forEach(data -> {
             ShapedRecipeBuilder
