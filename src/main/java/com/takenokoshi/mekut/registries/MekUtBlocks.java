@@ -90,4 +90,8 @@ public class MekUtBlocks {
 
     public static final BlockRegistryObject<?, ?> RAW_SILICON_BLOCK = BLOCKS
             .register("raw_silicon_block", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_GRAY)));
+
+    public static final BlockRegistryObject<?, ?> ARTIFICIAL_BEDROCK = BLOCKS
+            .register("artificial_bedrock",
+                    () -> new Block(Block.Properties.of().strength(2.0F, 0x1.0p32F).mapColor(MapColor.DEEPSLATE)));
 }

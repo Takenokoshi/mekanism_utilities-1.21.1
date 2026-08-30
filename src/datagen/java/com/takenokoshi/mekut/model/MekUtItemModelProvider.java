@@ -25,6 +25,8 @@ public class MekUtItemModelProvider extends ItemModelProvider {
                 .texture("layer0", MekUtConstants.rl("item/artificial_star"));
         simpleItem(MekUtItems.SILICON.get())
                 .texture("layer0", MekUtConstants.rl("item/silicon"));
+        simpleItem(MekUtItems.NONWOVEN_FABRIC.get())
+                .texture("layer0", MekUtConstants.rl("item/nonwoven_fabric"));
 
         simpleItem(MekUtItems.XP_CRYSTAL.get()).texture("layer0", MekUtConstants.rl("item/crystal/xp"));
 
@@ -34,6 +36,8 @@ public class MekUtItemModelProvider extends ItemModelProvider {
         simpleItem(MekUtItems.SILICON_DUST.get()).texture("layer0", MekUtConstants.rl("item/dust/silicon"));
         simpleItem(MekUtItems.REFINED_LAPIS_LAZULI_DUST.get()).texture("layer0",
                 MekUtConstants.rl("item/dust/refined_lapis_lazuli"));
+        simpleItem(MekUtItems.CALCIUM_CARBIDE_DUST.get()).texture("layer0", MekUtConstants.rl("item/dust/calcium_carbide"));
+        simpleItem(MekUtItems.CALCIUM_HYDROXIDE_DUST.get()).texture("layer0", MekUtConstants.rl("item/dust/calcium_hydroxide"));
 
         simpleItem(MekUtItems.IRIDIUM_INGOT.get())
                 .texture("layer0", MekUtConstants.rl("item/ingot/iridium"));

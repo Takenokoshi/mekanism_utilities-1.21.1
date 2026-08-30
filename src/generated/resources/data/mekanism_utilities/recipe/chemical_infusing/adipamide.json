@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanismelements"
+    }
+  ],
+  "type": "mekanism:chemical_infusing",
+  "left_input": {
+    "amount": 1,
+    "chemical": "mekanism_utilities:adipic_acid"
+  },
+  "output": {
+    "amount": 1,
+    "id": "mekanism_utilities:adipamide"
+  },
+  "right_input": {
+    "amount": 2,
+    "chemical": "mekanismelements:ammonia"
+  }
+}

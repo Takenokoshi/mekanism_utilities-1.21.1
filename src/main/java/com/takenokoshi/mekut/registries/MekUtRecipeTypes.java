@@ -1,5 +1,6 @@
 package com.takenokoshi.mekut.registries;
 
+import com.takenokoshi.mekaddonlib.recipe.inputcache.MekALSingleInputRecipeCache;
 import com.takenokoshi.mekaddonlib.recipe.type.MekALRecipeType;
 import com.takenokoshi.mekaddonlib.registration.MekALRecipeTypeDeferredRegister;
 import com.takenokoshi.mekaddonlib.registration.MekALRecipeTypeRegistryObject;
@@ -12,6 +13,7 @@ import com.takenokoshi.mekut.recipe.inputcache.MUSingleInputRecipeCache;
 import com.takenokoshi.mekut.recipe.inputcache.MekUtDoubleInputRecipeCache;
 import com.takenokoshi.mekut.recipe.inputcache.MekUtTripleInputRecipeCache;
 import com.takenokoshi.mekut.recipe.recipe.prefab.BiChemicalToItemRecipe;
+import com.takenokoshi.mekut.recipe.recipe.prefab.ChemicalToBiChemicalRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.ChemicalToChemicalHeatRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.FluidToItemRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.GreenHouseCropRecipe;
@@ -79,4 +81,10 @@ public class MekUtRecipeTypes {
 
     public static final MekALRecipeTypeRegistryObject<SingleChemicalRecipeInput, ChemicalToChemicalHeatRecipe, MUSingleInputRecipeCache.MUSingleChemical<ChemicalToChemicalHeatRecipe>> FISSION_REACTOR = RECIPE_TYPES
             .registerMekAL(MekUtRecipeConstants.FISSION_REACTOR, FissonReactorRecipeType::new);
+
+    public static final MekALRecipeTypeRegistryObject<SingleChemicalRecipeInput, ChemicalToBiChemicalRecipe, MekALSingleInputRecipeCache.MekALSingleChemical<ChemicalToBiChemicalRecipe>> PYROLYSIS = RECIPE_TYPES
+            .registerMekAL(MekUtRecipeConstants.PYROLYSIS,
+                    id -> new MekALRecipeType<>(id,
+                            recipeType -> new MekALSingleInputRecipeCache.MekALSingleChemical<>(recipeType,
+                                    ChemicalToBiChemicalRecipe::getInputChemicals)));
 }

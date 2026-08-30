@@ -10,6 +10,7 @@ import com.glodblock.github.extendedae.ExtendedAE;
 import com.glodblock.github.extendedae.common.EAESingletons;
 import com.takenokoshi.mekut.core.MekUtConstants;
 import com.takenokoshi.mekut.recipe.builder.ItemStackListFluidChemicalToItemFluidChemicalRecipeBuilder;
+import com.takenokoshi.mekut.registries.MekUtBlocks;
 import com.takenokoshi.mekut.registries.MekUtChemicals;
 import com.takenokoshi.mekut.registries.MekUtItems;
 
@@ -29,6 +30,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import net.neoforged.neoforge.fluids.FluidStack;
@@ -164,5 +166,29 @@ public class SDRCRecipes {
                 .setEnergyRequired(200)
                 .addCondition(new ModLoadedCondition(AppFlux.MODID))
                 .build(output, MekUtConstants.rl("small_digital_reaction_chamber/appflux_redstone_crystal"));
+        ItemStackListFluidChemicalToItemFluidChemicalRecipeBuilder
+                .smallDigitalReactionChamber(new ItemStack(MekUtBlocks.ARTIFICIAL_BEDROCK, 1),
+                        FluidStack.EMPTY,
+                        ChemicalStack.EMPTY)
+                .addItemInput(Items.DEEPSLATE, 64)
+                .addItemInput(Tags.Items.OBSIDIANS, 64)
+                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(2L))
+                .setFluidInput(Tags.Fluids.LAVA, 100)
+                .setEnergyRequired(2000000L)
+                .build(output, MekUtConstants.rl("small_digital_reaction_chamber/artificial_bedrock"));
+        ItemStackListFluidChemicalToItemFluidChemicalRecipeBuilder
+                .smallDigitalReactionChamber(MekUtItems.CALCIUM_HYDROXIDE_DUST.asStack(1), FluidStack.EMPTY,
+                        MekUtChemicals.ACETYLENE.asStack(50L))
+                .addItemInput(MekUtItems.CALCIUM_CARBIDE_DUST, 1)
+                .setFluidInput(Tags.Fluids.WATER, 100)
+                .addCondition(new ModLoadedCondition(MekanismElements.MODID))
+                .build(output, MekUtConstants.rl("small_digital_reaction_chamber/acetylene"));
+        ItemStackListFluidChemicalToItemFluidChemicalRecipeBuilder
+                .smallDigitalReactionChamber(new ItemStack(Items.IRON_INGOT, 1), new FluidStack(Fluids.LAVA, 100),
+                        MekUtChemicals.BENZENE.asStack(100))
+                .addItemInput(Items.IRON_INGOT, 1)
+                .setFluidInput(new FluidStack(Fluids.LAVA, 100))
+                .setChemicalInput(MekUtChemicals.ACETYLENE.asStack(300))
+                .build(output, MekUtConstants.rl("small_digital_reaction_chamber/benzene"));
     }
 }

@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:chemical_infusing",
+  "left_input": {
+    "amount": 2,
+    "chemical": "mekanism:carbon"
+  },
+  "output": {
+    "amount": 2,
+    "id": "mekanism_utilities:carbon_monoxide"
+  },
+  "right_input": {
+    "amount": 1,
+    "chemical": "mekanism:oxygen"
+  }
+}

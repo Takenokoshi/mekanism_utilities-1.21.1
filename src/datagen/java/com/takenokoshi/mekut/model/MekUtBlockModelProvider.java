@@ -57,6 +57,8 @@ public class MekUtBlockModelProvider extends BlockStateProvider {
             simpleBlockWithItem(material.rawBlock().get(), wipModel);
         });
 
+        simpleBlockWithItem(MekUtBlocks.ARTIFICIAL_BEDROCK.get(), models().getExistingFile(mcLoc("block/bedrock")));
+
         mekUtSimpleMachine(MekUtMachines.CHEMICAL_CUTTER,
                 true,
                 "standard",
@@ -93,6 +95,10 @@ public class MekUtBlockModelProvider extends BlockStateProvider {
                 true,
                 "augment",
                 "lazer_compress_nucleo_synthesizer");
+        mekUtSimpleMachine(MekUtMachines.PYROLYSIS_MACHINE,
+                true,
+                "digital",
+                "pyrolysis_machine");
         mekUtSimpleMachine(MekUtMachines.SMALL_DIGITAL_ASSEMBLER,
                 true,
                 "digital",

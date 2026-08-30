@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:chemical_infusing",
+  "left_input": {
+    "amount": 2,
+    "chemical": "mekanism:ethene"
+  },
+  "output": {
+    "amount": 2,
+    "id": "mekanism_utilities:1.2-dichloroethane"
+  },
+  "right_input": {
+    "amount": 5,
+    "chemical": "mekanism_utilities:hydrogen_chloride-oxigen_mixed_gas"
+  }
+}

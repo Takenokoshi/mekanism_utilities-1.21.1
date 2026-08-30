@@ -334,6 +334,16 @@ public class CraftingRecipes {
                 .pattern("CCC")
                 .unlockedBy("unlock", has.apply(MekUtItems.DIGITAL_CONTROL_CIRCUIT))
                 .save(output, MekUtConstants.rl("crafting/tier_installer/augment_universal_storage"));
+        ShapedRecipeBuilder
+                .shaped(RecipeCategory.REDSTONE, new ItemStack(MekUtMachines.PYROLYSIS_MACHINE, 1))
+                .define('R', MekanismBlocks.RESISTIVE_HEATER)
+                .define('C', MekUtItems.DIGITAL_CONTROL_CIRCUIT)
+                .define('T', MekanismBlocks.DYNAMIC_TANK)
+                .pattern("TCT")
+                .pattern("CRC")
+                .pattern("TCT")
+                .unlockedBy("unlock", has.apply(MekanismBlocks.RESISTIVE_HEATER))
+                .save(output, MekUtConstants.rl("crafting/machine/pyrolysis_machine"));
 
         NORMAL_MACHINES.forEach(data -> {
             ShapedRecipeBuilder

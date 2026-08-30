@@ -6,6 +6,7 @@ import com.takenokoshi.mekaddonlib.recipe_viewer.jei.MekALRecipeRegistryHelper;
 import com.takenokoshi.mekut.core.MekUtConstants;
 import com.takenokoshi.mekut.recipe.type.WrappedRecipeType;
 import com.takenokoshi.mekut.recipe_viewer.jei.category.BiChemicalToItemRecipeCategory;
+import com.takenokoshi.mekut.recipe_viewer.jei.category.ChemicalToBiChemicalRecipeCategory;
 import com.takenokoshi.mekut.recipe_viewer.jei.category.FissionReactorRecipeCategory;
 import com.takenokoshi.mekut.recipe_viewer.jei.category.FluidToItemRecipeCategory;
 import com.takenokoshi.mekut.recipe_viewer.jei.category.GreenHouseRecipeCategory;
@@ -80,6 +81,7 @@ public class MekUtJEIPlugin implements IModPlugin {
                 new BiChemicalToItemRecipeCategory(guiHelper, MekUtRecipeViewerRecipeType.STELLAR_GENESIS),
                 new MekUtEnergizedSmelterRecipeCategory<>(guiHelper, MekUtRecipeViewerRecipeType.TWEAKED_SMELLTING),
                 new FissionReactorRecipeCategory(guiHelper, MekUtRecipeViewerRecipeType.FISSION_REACTOR),
+                new ChemicalToBiChemicalRecipeCategory(guiHelper, MekUtRecipeViewerRecipeType.PYROLYSIS),
         });
     }
 
@@ -108,6 +110,8 @@ public class MekUtJEIPlugin implements IModPlugin {
                 MekUtRecipeTypes.FISSION_REACTOR);
         MekALRecipeRegistryHelper.register(registry, MekUtRecipeViewerRecipeType.TWEAKED_SMELLTING,
                 WrappedRecipeType.VANILLA_SMELTING);
+        MekALRecipeRegistryHelper.register(registry, MekUtRecipeViewerRecipeType.PYROLYSIS,
+                MekUtRecipeTypes.PYROLYSIS);
     }
 
     @Override
@@ -126,6 +130,7 @@ public class MekUtJEIPlugin implements IModPlugin {
                 MekUtRecipeViewerRecipeType.STELLAR_GENESIS,
                 MekUtRecipeViewerRecipeType.FISSION_REACTOR,
                 MekUtRecipeViewerRecipeType.TWEAKED_SMELLTING,
+                MekUtRecipeViewerRecipeType.PYROLYSIS,
         });
         CatalystRegistryHelper.register(registry, RecipeTypes.SMELTING,
                 List.of(MekUtMachines.TWEAKED_ENERGIZED_SMELTER));

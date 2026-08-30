@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:compressing",
+  "chemical_input": {
+    "amount": 200,
+    "chemical": "mekanism_utilities:polyvinyl_chloride"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism_utilities:nonwoven_fabric"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:leather"
+  },
+  "per_tick_usage": false
+}

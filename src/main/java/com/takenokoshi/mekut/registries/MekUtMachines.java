@@ -19,6 +19,7 @@ import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactSPS;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactThermalEvaporationPlant;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractEnergizedSmelter;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractGreenHouse;
+import com.takenokoshi.mekut.blockentity.abs.BEAbstractPyrolysisMachine;
 import com.takenokoshi.mekut.blockentity.factory.BEEnergizedSmeltingFactory;
 import com.takenokoshi.mekut.blockentity.interfaces.machine.IBiChemicalToObjectRecipeMachine;
 import com.takenokoshi.mekut.blockentity.interfaces.machine.IFluidToObjectMachine;
@@ -35,6 +36,7 @@ import com.takenokoshi.mekut.blockentity.machine.BECompactThermalEvaporationPlan
 import com.takenokoshi.mekut.blockentity.machine.BEGreenHouse;
 import com.takenokoshi.mekut.blockentity.machine.BEIceMaker;
 import com.takenokoshi.mekut.blockentity.machine.BELazerCompressNucleoSynthesizer;
+import com.takenokoshi.mekut.blockentity.machine.BEPyrolysisMachine;
 import com.takenokoshi.mekut.blockentity.machine.BESmallDigitalAssembler;
 import com.takenokoshi.mekut.blockentity.machine.BESmallDigitalReactionChamber;
 import com.takenokoshi.mekut.blockentity.machine.BEStellarGenesisChamber;
@@ -204,6 +206,20 @@ public class MekUtMachines {
                                     MekanismConfig.usage.antiprotonicNucleosynthesizer,
                                     MekanismConfig.storage.antiprotonicNucleosynthesizer)
                             .withSound(MekanismSounds.ANTIPROTONIC_NUCLEOSYNTHESIZER)
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING));
+
+    public static final SimpleMachineRegistryObject<BEPyrolysisMachine> PYROLYSIS_MACHINE = MACHINES
+            .registerSimple("pyrolysis_machine",
+                    BEAbstractPyrolysisMachine.SIDE_CONFIG,
+                    BEAbstractPyrolysisMachine.getContainerAdder(10_000L)::accept,
+                    BEPyrolysisMachine::new,
+                    BEPyrolysisMachine.class,
+                    builder -> builder
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
+                            .withEnergyConfig(
+                                    MekanismConfig.usage.chemicalInfuser,
+                                    MekanismConfig.storage.chemicalInfuser)
+                            .withSound(MekanismSounds.RESISTIVE_HEATER)
                             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING));
 
     public static final GuiSizedMachineRegistryObject<BESmallDigitalAssembler> SMALL_DIGITAL_ASSEMBLER = MACHINES

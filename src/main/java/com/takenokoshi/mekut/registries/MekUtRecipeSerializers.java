@@ -11,6 +11,7 @@ import com.takenokoshi.mekut.recipe.recipe.basic.BasicGreenHouseFertilizerRecipe
 import com.takenokoshi.mekut.recipe.recipe.basic.BasicGreenHouseRecipe;
 import com.takenokoshi.mekut.recipe.recipe.basic.BasicIceMakingRecipe;
 import com.takenokoshi.mekut.recipe.recipe.basic.BasicLazerCompressRecipe;
+import com.takenokoshi.mekut.recipe.recipe.basic.BasicPyrolysisRecipe;
 import com.takenokoshi.mekut.recipe.recipe.basic.BasicSPSRecipe;
 import com.takenokoshi.mekut.recipe.recipe.basic.BasicSmallDigitalAssemblerRecipe;
 import com.takenokoshi.mekut.recipe.serializer.MekUtRecipeSerializerBuilder;
@@ -72,4 +73,8 @@ public class MekUtRecipeSerializers {
     public static final DeferredHolder<RecipeSerializer<?>, MekanismRecipeSerializer<BasicFissionReactorRecipe>> FISSION_REACTOR = RECIPE_SERIALIZERS
             .register(MekUtRecipeConstants.FISSION_REACTOR,
                     () -> MekUtRecipeSerializerBuilder.chemicalToChemicalHeat(BasicFissionReactorRecipe::new));
+
+    public static final DeferredHolder<RecipeSerializer<?>, MekanismRecipeSerializer<BasicPyrolysisRecipe>> PIROLYSIS = RECIPE_SERIALIZERS
+            .register(MekUtRecipeConstants.PYROLYSIS,
+                    () -> MekUtRecipeSerializerBuilder.chemicalToBiChemical(BasicPyrolysisRecipe::new));
 }

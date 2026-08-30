@@ -1,0 +1,24 @@
+{
+  "type": "mekanism:reaction",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanism_utilities:methanol"
+  },
+  "chemical_output": {
+    "amount": 200,
+    "id": "mekanism_utilities:propylene"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 20,
+    "tag": "c:lava"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "minecraft:glowstone_dust"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "minecraft:glowstone_dust"
+  }
+}

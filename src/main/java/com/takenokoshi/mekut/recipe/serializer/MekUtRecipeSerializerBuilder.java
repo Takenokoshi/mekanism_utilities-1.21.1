@@ -12,6 +12,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.takenokoshi.mekut.recipe.output.MekUtChanceOutput;
 import com.takenokoshi.mekut.recipe.recipe.prefab.BiChemicalToItemRecipe;
+import com.takenokoshi.mekut.recipe.recipe.prefab.ChemicalToBiChemicalRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.ChemicalToChemicalHeatRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.FluidToItemRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.GreenHouseCropRecipe;
@@ -224,6 +225,26 @@ public final class MekUtRecipeSerializerBuilder {
                         GreenHouseRecipe::getOutputsRaw,
                         ByteBufCodecs.INT,
                         GreenHouseRecipe::getDuration,
+                        factory));
+    }
+
+    public static <RECIPE extends ChemicalToBiChemicalRecipe> MekanismRecipeSerializer<RECIPE> chemicalToBiChemical(
+            Function3<ChemicalStackIngredient, ChemicalStack, ChemicalStack, RECIPE> factory) {
+        return new MekanismRecipeSerializer<>(RecordCodecBuilder.mapCodec(instance -> instance.group(
+                IngredientCreatorAccess.chemicalStack().codec().fieldOf(SerializationConstants.INPUT)
+                        .forGetter(ChemicalToBiChemicalRecipe::getInput),
+                ChemicalStack.CODEC.fieldOf(SerializationConstants.MAIN_OUTPUT)
+                        .forGetter(ChemicalToBiChemicalRecipe::getOutput1Raw),
+                ChemicalStack.CODEC.fieldOf(SerializationConstants.SECONDARY_OUTPUT)
+                        .forGetter(ChemicalToBiChemicalRecipe::getOutput2Raw))
+                .apply(instance, factory)),
+                StreamCodec.composite(
+                        IngredientCreatorAccess.chemicalStack().streamCodec(),
+                        ChemicalToBiChemicalRecipe::getInput,
+                        ChemicalStack.STREAM_CODEC,
+                        ChemicalToBiChemicalRecipe::getOutput1Raw,
+                        ChemicalStack.STREAM_CODEC,
+                        ChemicalToBiChemicalRecipe::getOutput2Raw,
                         factory));
     }
 

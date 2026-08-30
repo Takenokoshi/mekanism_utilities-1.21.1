@@ -1,0 +1,20 @@
+{
+  "type": "mekanism:reaction",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanism_utilities:chloroethylene"
+  },
+  "chemical_output": {
+    "amount": 1000,
+    "id": "mekanism_utilities:polyvinyl_chloride"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 20,
+    "fluid": "mekanism:oxygen"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism:substrate"
+  }
+}

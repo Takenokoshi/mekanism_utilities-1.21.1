@@ -4,6 +4,7 @@ import com.takenokoshi.mekaddonlib.recipe_viewer.type.RVMekALRecipeTypeWrapper;
 import com.takenokoshi.mekut.core.MekUtConstants;
 import com.takenokoshi.mekut.recipe.MekUtRecipeConstants;
 import com.takenokoshi.mekut.recipe.recipe.prefab.BiChemicalToItemRecipe;
+import com.takenokoshi.mekut.recipe.recipe.prefab.ChemicalToBiChemicalRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.ChemicalToChemicalHeatRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.FluidToItemRecipe;
 import com.takenokoshi.mekut.recipe.recipe.prefab.GreenHouseRecipe;
@@ -81,4 +82,10 @@ public class MekUtRecipeViewerRecipeType {
             WrappedRecipeType.VANILLA_SMELTING, -28, -16, 152, 54,
             MekUtMachines.TWEAKED_ENERGIZED_SMELTER,
             MekUtMachines.ENERGIZED_SMELTING_FACTORIES.values().toArray(ItemLike[]::new));
+
+    public static final RVMekALRecipeTypeWrapper<?, ChemicalToBiChemicalRecipe, ?> PYROLYSIS = new RVMekALRecipeTypeWrapper<>(
+            MekUtConstants.rl(MekUtRecipeConstants.PYROLYSIS),
+            ChemicalToBiChemicalRecipe.class,
+            MekUtRecipeTypes.PYROLYSIS, -7, -13, 162, 60,
+            MekUtMachines.PYROLYSIS_MACHINE);
 }

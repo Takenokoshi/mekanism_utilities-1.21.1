@@ -58,6 +58,28 @@ public class MekUtEnglishLangProvider extends LanguageProvider {
             add("fluid.mekanism_utilities." + holder.getId().getPath(), format(holder.getId().getPath()));
         });
         List.of(new DeferredChemical[] {
+                MekUtChemicals.REFINED_LAPIS_LAZULI,
+                MekUtChemicals.XP,
+                MekUtChemicals.ENRICHED_XP,
+                MekUtChemicals.ASTRAL_ETHER,
+                MekUtChemicals.AMETHYST,
+                MekUtChemicals.GLOWSTONE,
+                MekUtChemicals.IRIDIUM,
+                MekUtChemicals.NETHERITE,
+                MekUtChemicals.ACETYLENE,
+                MekUtChemicals.BENZENE,
+                MekUtChemicals.CYCLOHEXANE,
+                MekUtChemicals.ADIPIC_ACID,
+                MekUtChemicals.ADIPAMIDE,
+                MekUtChemicals.ADIPONITRILE,
+                MekUtChemicals.HEXAMETHYLENE_DIAMINE,
+                MekUtChemicals.POLYAMIDE_FIBER,
+                MekUtChemicals.CHLOROETHYLENE,
+                MekUtChemicals.POLYVINYL_CHLORIDE,
+                MekUtChemicals.PROPYLENE,
+                MekUtChemicals.POLYPROPYLENE,
+                MekUtChemicals.CARBON_MONOXIDE,
+                MekUtChemicals.METHANOL,
                 MekUtChemicals.CLEAN_AMETHYST_SLURRY,
                 MekUtChemicals.CLEAN_CERTUS_QUARTZ_SLURRY,
                 MekUtChemicals.CLEAN_COAL_SLURRY,
@@ -85,14 +107,10 @@ public class MekUtEnglishLangProvider extends LanguageProvider {
                 MekUtChemicals.DIRTY_REDSTONE_SLURRY,
                 MekUtChemicals.DIRTY_SILICON_SLURRY,
         }).forEach(this::addChemical);
-        addChemical(MekUtChemicals.REFINED_LAPIS_LAZULI);
-        addChemical(MekUtChemicals.ENRICHED_XP);
-        addChemical(MekUtChemicals.XP);
-        addChemical(MekUtChemicals.AMETHYST);
-        addChemical(MekUtChemicals.GLOWSTONE);
-        addChemical(MekUtChemicals.ASTRAL_ETHER);
-        addChemical(MekUtChemicals.IRIDIUM);
-        addChemical(MekUtChemicals.NETHERITE);
+        add(MekUtChemicals.KA_OIL.getTranslationKey(), "KA Oil");
+        add(MekUtChemicals.I_II_DICHLOROETHANE.getTranslationKey(), "1,2-Dichloroethane");
+        add(MekUtChemicals.HYDROGEN_CHLORIDE_OXIGEN_MIXED_GAS.getTranslationKey(),
+                "Hydrogen Chloride-Oxigen Mixed Gas");
         addLang(MekUtLang.MOD_NAME, "Mekanism:Utilities");
         addLang(MekUtLang.CREATIVE_TAB, "Mekanism:Utilities");
         addLang(MekUtDescription.AMETHYST_ORE,

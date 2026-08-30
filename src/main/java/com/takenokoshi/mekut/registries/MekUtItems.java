@@ -47,9 +47,13 @@ public class MekUtItems {
             .register("refined_lapis_lazuli_dust");
     public static final ItemRegistryObject<Item> IRIDIUM_DUST = ITEMS.register("iridium_dust");
     public static final ItemRegistryObject<Item> SILICON_DUST = ITEMS.register("silicon_dust");
+    public static final ItemRegistryObject<Item> CALCIUM_CARBIDE_DUST = ITEMS.register("calcium_carbide_dust");
+    public static final ItemRegistryObject<Item> CALCIUM_HYDROXIDE_DUST = ITEMS.register("calcium_hydroxide_dust");
     public static final ItemRegistryObject<Item> IRIDIUM_INGOT = ITEMS.register("iridium_ingot");
 
     public static final ItemRegistryObject<Item> SILICON = ITEMS.register("silicon");
+
+    public static final ItemRegistryObject<Item> NONWOVEN_FABRIC = ITEMS.register("nonwoven_fabric");
 
     public static final ItemRegistryObject<XpCrystalItem> XP_CRYSTAL = ITEMS.registerItem("xp_crystal",
             XpCrystalItem::new);

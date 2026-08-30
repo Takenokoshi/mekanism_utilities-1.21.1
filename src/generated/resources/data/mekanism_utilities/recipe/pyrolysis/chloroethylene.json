@@ -1,0 +1,15 @@
+{
+  "type": "mekanism_utilities:pyrolysis",
+  "input": {
+    "amount": 1,
+    "chemical": "mekanism_utilities:1.2-dichloroethane"
+  },
+  "main_output": {
+    "amount": 1,
+    "id": "mekanism_utilities:chloroethylene"
+  },
+  "secondary_output": {
+    "amount": 1,
+    "id": "mekanism:hydrogen_chloride"
+  }
+}

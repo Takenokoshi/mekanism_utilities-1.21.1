@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanismelements"
+    }
+  ],
+  "type": "mekanism_utilities:small_digital_reaction_chamber",
+  "chemical_output": {
+    "amount": 50,
+    "id": "mekanism_utilities:acetylene"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:water"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "mekanism_utilities:calcium_hydroxide_dust"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_utilities:calcium_carbide_dust"
+    }
+  ]
+}

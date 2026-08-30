@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:chemical_infusing",
+  "left_input": {
+    "amount": 1,
+    "chemical": "mekanism_utilities:carbon_monoxide"
+  },
+  "output": {
+    "amount": 1,
+    "id": "mekanism_utilities:methanol"
+  },
+  "right_input": {
+    "amount": 2,
+    "chemical": "mekanism:hydrogen"
+  }
+}

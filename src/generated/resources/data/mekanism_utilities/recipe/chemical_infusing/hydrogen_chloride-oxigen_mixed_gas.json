@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:chemical_infusing",
+  "left_input": {
+    "amount": 4,
+    "chemical": "mekanism:hydrogen_chloride"
+  },
+  "output": {
+    "amount": 5,
+    "id": "mekanism_utilities:hydrogen_chloride-oxigen_mixed_gas"
+  },
+  "right_input": {
+    "amount": 1,
+    "chemical": "mekanism:oxygen"
+  }
+}

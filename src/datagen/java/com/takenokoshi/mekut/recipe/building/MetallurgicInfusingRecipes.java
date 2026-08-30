@@ -6,6 +6,8 @@ import com.takenokoshi.mekut.registries.MekUtItems;
 
 import appeng.core.AppEng;
 import appeng.core.definitions.AEItems;
+import fixdol.mekanismelements.common.MekanismElements;
+import fixdol.mekanismelements.common.registries.MSItems;
 import mekanism.api.datagen.recipe.builder.ItemStackChemicalToItemStackRecipeBuilder;
 import mekanism.api.recipes.ingredients.creator.IChemicalStackIngredientCreator;
 import mekanism.api.recipes.ingredients.creator.IItemStackIngredientCreator;
@@ -74,5 +76,13 @@ public class MetallurgicInfusingRecipes {
                         false)
                 .addCondition(new ModLoadedCondition(AppEng.MOD_ID))
                 .build(output, MekUtConstants.rl("metallurgic_infusing/ender_pearl"));
+        ItemStackChemicalToItemStackRecipeBuilder
+                .metallurgicInfusing(
+                        creatorI.from(MSItems.DUST_CALCIUM_OXIDE, 1),
+                        creatorC.fromHolder(MekanismChemicals.CARBON, 40L),
+                        MekUtItems.CALCIUM_CARBIDE_DUST.asStack(1),
+                        false)
+                .addCondition(new ModLoadedCondition(MekanismElements.MODID))
+                .build(output, MekUtConstants.rl("metallurgic_infusing/calcium_carbide_dust"));
     }
 }

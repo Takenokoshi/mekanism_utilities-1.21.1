@@ -1,0 +1,20 @@
+{
+  "type": "mekanism:reaction",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanism_utilities:propylene"
+  },
+  "chemical_output": {
+    "amount": 1000,
+    "id": "mekanism_utilities:polypropylene"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 20,
+    "fluid": "mekanism:oxygen"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism:substrate"
+  }
+}

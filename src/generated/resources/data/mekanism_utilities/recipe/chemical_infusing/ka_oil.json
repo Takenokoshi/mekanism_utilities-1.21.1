@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:chemical_infusing",
+  "left_input": {
+    "amount": 4,
+    "chemical": "mekanism_utilities:cyclohexane"
+  },
+  "output": {
+    "amount": 4,
+    "id": "mekanism_utilities:ka_oil"
+  },
+  "right_input": {
+    "amount": 1,
+    "chemical": "mekanism:oxygen"
+  }
+}

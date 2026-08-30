@@ -1,0 +1,30 @@
+{
+  "type": "mekanism_utilities:small_digital_reaction_chamber",
+  "chemical_input": {
+    "amount": 300,
+    "chemical": "mekanism_utilities:acetylene"
+  },
+  "chemical_output": {
+    "amount": 100,
+    "id": "mekanism_utilities:benzene"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 100,
+    "fluid": "minecraft:lava"
+  },
+  "fluid_output": {
+    "amount": 100,
+    "id": "minecraft:lava"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "minecraft:iron_ingot"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "minecraft:iron_ingot"
+    }
+  ]
+}

@@ -34,6 +34,7 @@ public class MekUtScreens {
         registerMachineGui(event, MekUtMachines.ICE_MAKER, GuiFluidToObjectMachine<BEIceMaker>::new);
         registerMachineGui(event, MekUtMachines.LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
                 GuiBiChemicalToChemicalMachine<BELazerCompressNucleoSynthesizer>::new);
+        registerMachineGui(event, MekUtMachines.PYROLYSIS_MACHINE, GuiPyrolysisMachine<BEPyrolysisMachine>::new);
         registerMachineGui(event, MekUtMachines.SMALL_DIGITAL_ASSEMBLER,
                 GuiSmallDigitalAssembler<BESmallDigitalAssembler>::new);
         registerMachineGui(event, MekUtMachines.SMALL_DIGITAL_REACTION_CHAMBER,
@@ -42,7 +43,7 @@ public class MekUtScreens {
                 GuiBiChemicalToObjectMachine<BEStellarGenesisChamber>::new);
         registerMachineGui(event, MekUtMachines.SUBMATERIAL_CONVERTER, GuiSubMaterialConverter::new);
         registerMachineGui(event, MekUtMachines.TWEAKED_ENERGIZED_SMELTER,
-                GuiTweakedEnergizedSmelter<BETweakedEnergizedSmelter>::new);
+                GuiMekUtEnergizedSmelter<BETweakedEnergizedSmelter>::new);
         registerMachineGui(event, MekUtMachines.XP_TANK, GuiXpTank::new);
 
         registerMachineGui(event, MekUtMachines.ITEM_RATIO_SPLITTER, GuiItemRatioSplitter::new);

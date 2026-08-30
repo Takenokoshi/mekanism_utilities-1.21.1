@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:chemical_infusing",
+  "left_input": {
+    "amount": 1,
+    "chemical": "mekanism_utilities:adipamide"
+  },
+  "output": {
+    "amount": 1,
+    "id": "mekanism_utilities:hexamethylene_diamine"
+  },
+  "right_input": {
+    "amount": 6,
+    "chemical": "mekanism:hydrogen"
+  }
+}

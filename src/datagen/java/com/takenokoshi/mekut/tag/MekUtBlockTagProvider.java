@@ -45,6 +45,15 @@ public class MekUtBlockTagProvider extends BlockTagsProvider {
                         MekUtBlocks.RAW_QUARTZ_BLOCK.get(),
                         MekUtBlocks.RAW_REDSTONE_BLOCK.get(),
                         MekUtBlocks.RAW_SILICON_BLOCK.get(),
+                        MekUtBlocks.ARTIFICIAL_BEDROCK.get(),
+                });
+        tag(BlockTags.WITHER_IMMUNE)
+                .add(new Block[] {
+                        MekUtBlocks.ARTIFICIAL_BEDROCK.get(),
+                });
+        tag(BlockTags.DRAGON_IMMUNE)
+                .add(new Block[] {
+                        MekUtBlocks.ARTIFICIAL_BEDROCK.get(),
                 });
     }
 

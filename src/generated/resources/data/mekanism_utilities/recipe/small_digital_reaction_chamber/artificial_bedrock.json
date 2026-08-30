@@ -1,0 +1,27 @@
+{
+  "type": "mekanism_utilities:small_digital_reaction_chamber",
+  "chemical_input": {
+    "amount": 2,
+    "chemical": "mekanism:antimatter"
+  },
+  "duration": 100,
+  "energy_required": 2000000,
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:lava"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "mekanism_utilities:artificial_bedrock"
+  },
+  "list_item_input": [
+    {
+      "count": 64,
+      "item": "minecraft:deepslate"
+    },
+    {
+      "count": 64,
+      "tag": "c:obsidians"
+    }
+  ]
+}

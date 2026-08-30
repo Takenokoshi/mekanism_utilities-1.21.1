@@ -2,7 +2,7 @@ package com.takenokoshi.mekut.gui.machine;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.takenokoshi.mekaddonlib.blockentity.base.BlockEntityMekALProgressMachine;
+import com.takenokoshi.mekaddonlib.blockentity.interfaces.IWarningSupporter;
 import com.takenokoshi.mekut.blockentity.interfaces.machine.ITweakedEnergizedSmelter;
 import com.takenokoshi.mekut.recipe_viewer.type.MekUtRecipeViewerRecipeType;
 
@@ -17,15 +17,16 @@ import mekanism.client.gui.element.tab.GuiEnergyTab;
 import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.common.inventory.container.tile.MekanismTileContainer;
 import mekanism.common.inventory.warning.WarningTracker.WarningType;
+import mekanism.common.tile.base.TileEntityMekanism;
+import mekanism.common.tile.interfaces.ISideConfiguration;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.crafting.SmeltingRecipe;
 
-public class GuiTweakedEnergizedSmelter<BE extends BlockEntityMekALProgressMachine<SmeltingRecipe> & ITweakedEnergizedSmelter>
+public class GuiMekUtEnergizedSmelter<BE extends TileEntityMekanism & ISideConfiguration & IWarningSupporter & ITweakedEnergizedSmelter>
         extends GuiConfigurableTile<BE, MekanismTileContainer<BE>> {
 
-    public GuiTweakedEnergizedSmelter(MekanismTileContainer<BE> container, Inventory inv, Component title) {
+    public GuiMekUtEnergizedSmelter(MekanismTileContainer<BE> container, Inventory inv, Component title) {
         super(container, inv, title);
         dynamicSlots = true;
     }
