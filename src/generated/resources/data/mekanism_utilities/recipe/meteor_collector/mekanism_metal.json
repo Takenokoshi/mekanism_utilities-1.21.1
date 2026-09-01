@@ -1,0 +1,74 @@
+{
+  "type": "mekanism_utilities:meteor_collector",
+  "crop": {
+    "count": 1,
+    "tag": "c:dusts/osmium"
+  },
+  "duration": 2000,
+  "fertilizer": {
+    "amount": 1000000,
+    "fluid": "mekanismgenerators:fusion_fuel"
+  },
+  "output": [
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:osmium_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:deepslate_osmium_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:tin_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:deepslate_tin_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:lead_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:deepslate_lead_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:uranium_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:deepslate_uranium_ore"
+      }
+    }
+  ],
+  "soil": {
+    "count": 1,
+    "item": "minecraft:stone"
+  }
+}

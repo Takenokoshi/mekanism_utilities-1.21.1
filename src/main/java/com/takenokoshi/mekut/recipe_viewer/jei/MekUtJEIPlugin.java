@@ -74,6 +74,7 @@ public class MekUtJEIPlugin implements IModPlugin {
                 new GreenHouseRecipeCategory(guiHelper, MekUtRecipeViewerRecipeType.GREEN_HOUSE),
                 new FluidToItemRecipeCategory(guiHelper, MekUtRecipeViewerRecipeType.ICE_MAKING),
                 new ChemicalChemicalToChemicalRecipeCategory(guiHelper, MekUtRecipeViewerRecipeType.LAZER_COMPRESS),
+                new GreenHouseRecipeCategory(guiHelper, MekUtRecipeViewerRecipeType.METEOR_COLLECTOR),
                 new SmallDigitalAssemblerRecipeCategory(guiHelper, MekUtRecipeViewerRecipeType.SMALL_DIGITAL_ASSEMBLER),
                 new SmallDigitalReactionChamberRecipeCategory(guiHelper,
                         MekUtRecipeViewerRecipeType.SMALL_DIGITAL_REACTION_CHAMBER),
@@ -98,6 +99,8 @@ public class MekUtJEIPlugin implements IModPlugin {
                 MekUtRecipeTypes.ICE_MAKING);
         MekALRecipeRegistryHelper.register(registry, MekUtRecipeViewerRecipeType.LAZER_COMPRESS,
                 MekUtRecipeTypes.LAZER_COMPRESS);
+        MekALRecipeRegistryHelper.register(registry, MekUtRecipeViewerRecipeType.METEOR_COLLECTOR,
+                MekUtRecipeTypes.METEOR_COLLECTOR);
         MekALRecipeRegistryHelper.register(registry, MekUtRecipeViewerRecipeType.SMALL_DIGITAL_ASSEMBLER,
                 MekUtRecipeTypes.SMALL_DIGITAL_ASSEMBLER);
         MekALRecipeRegistryHelper.register(registry, MekUtRecipeViewerRecipeType.SMALL_DIGITAL_REACTION_CHAMBER,
@@ -124,6 +127,7 @@ public class MekUtJEIPlugin implements IModPlugin {
                 MekUtRecipeViewerRecipeType.GREEN_HOUSE,
                 MekUtRecipeViewerRecipeType.ICE_MAKING,
                 MekUtRecipeViewerRecipeType.LAZER_COMPRESS,
+                MekUtRecipeViewerRecipeType.METEOR_COLLECTOR,
                 MekUtRecipeViewerRecipeType.SMALL_DIGITAL_ASSEMBLER,
                 MekUtRecipeViewerRecipeType.SMALL_DIGITAL_REACTION_CHAMBER,
                 MekUtRecipeViewerRecipeType.SPS,

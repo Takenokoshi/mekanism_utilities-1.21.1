@@ -43,6 +43,7 @@ public class MekUtClient extends MekUt {
 
     private void clientSetup(FMLClientSetupEvent event) {
         addCustomModel(MekUtMachines.GREEN_HOUSE, (orig, evt) -> new GreenHouseBakedModel(orig));
+        addCustomModel(MekUtMachines.METEOR_COLLECTOR, (orig, evt) -> new GreenHouseBakedModel(orig));
         event.enqueueWork(() -> {
             @SuppressWarnings("unused")
             Minecraft minecraft = Minecraft.getInstance();

@@ -87,4 +87,8 @@ public class MekUtRecipeTypes {
                     id -> new MekALRecipeType<>(id,
                             recipeType -> new MekALSingleInputRecipeCache.MekALSingleChemical<>(recipeType,
                                     ChemicalToBiChemicalRecipe::getInputChemicals)));
+
+    public static final MekALRecipeTypeRegistryObject<RecipeInput, GreenHouseRecipe, MekUtTripleInputRecipeCache.ItemItemFluid<GreenHouseRecipe>> METEOR_COLLECTOR = RECIPE_TYPES
+            .registerMekAL(MekUtRecipeConstants.METEOR_COLLECTOR,
+                    id -> new MekALRecipeType<>(id, MekUtTripleInputRecipeCache.ItemItemFluid::greenHouse));
 }

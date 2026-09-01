@@ -14,4 +14,5 @@ public final class MekUtRecipeConstants {
     public static final String STELLAR_GENESIS = "stellar_genesis";
     public static final String FISSION_REACTOR = "fission_reactor";
     public static final String PYROLYSIS = "pyrolysis";
+    public static final String METEOR_COLLECTOR = "meteor_collector";
 }

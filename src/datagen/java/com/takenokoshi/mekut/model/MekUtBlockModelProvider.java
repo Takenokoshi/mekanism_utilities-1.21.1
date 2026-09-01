@@ -321,10 +321,6 @@ public class MekUtBlockModelProvider extends BlockStateProvider {
                             .build();
                 });
 
-        simpleBlockItem(
-                machine.getBlock().get(),
-                inactive);
-
     }
 
     private void mekanismMachine(

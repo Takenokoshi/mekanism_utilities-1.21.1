@@ -23,6 +23,7 @@ import com.takenokoshi.mekut.recipe.inputcache.MekUtTripleInputRecipeCache;
 import com.takenokoshi.mekut.recipe.lookup.recipe.ITripleInputRecipeLookupHandler;
 import com.takenokoshi.mekut.recipe.output.BasicChanceOutputHandler;
 import com.takenokoshi.mekut.recipe.recipe.prefab.GreenHouseRecipe;
+import com.takenokoshi.mekut.recipe_viewer.type.MekUtRecipeViewerRecipeType;
 import com.takenokoshi.mekut.registries.MekUtRecipeTypes;
 
 import mekanism.api.IContentsListener;
@@ -32,6 +33,7 @@ import mekanism.api.inventory.IInventorySlot;
 import mekanism.api.recipes.cache.CachedRecipe.OperationTracker.RecipeError;
 import mekanism.api.recipes.inputs.IInputHandler;
 import mekanism.api.recipes.inputs.InputHelper;
+import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.common.attachments.component.AttachedSideConfig;
 import mekanism.common.attachments.component.AttachedSideConfig.LightConfigInfo;
 import mekanism.common.attachments.containers.ContainerType;
@@ -254,6 +256,11 @@ public abstract class BEAbstractGreenHouse extends BEMultiScaledProgressMachine<
     public boolean isOffsetCapabilityDisabled(@NotNull BlockCapability<?, @Nullable Direction> capability,
             Direction side, @NotNull Vec3i offset) {
         return side == Direction.UP || offset.getY() >= 1;
+    }
+
+    @Override
+    public @Nullable IRecipeViewerRecipeType<?> recipeViewerType() {
+        return MekUtRecipeViewerRecipeType.GREEN_HOUSE;
     }
 
 }

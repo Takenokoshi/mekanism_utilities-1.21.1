@@ -136,6 +136,10 @@ public class MekUtEnglishLangProvider extends LanguageProvider {
                 "A machine that lives up to its name: one that cools water to produce ice.");
         addLang(MekUtMachines.LAZER_COMPRESS_NUCLEO_SYNTHESIZER.descriptionEntry,
                 "A machine that triggers a special nuclear reaction through precise laser control.");
+        addLang(MekUtMachines.METEOR_COLLECTOR.descriptionEntry,
+                "Captures meteorites using quantum entanglement and extracts their resources.");
+        addLang(MekUtMachines.PYROLYSIS_MACHINE.descriptionEntry,
+                "PYROLYSIS MACHINE.");
         addLang(MekUtMachines.STELLAR_GENESIS_CHAMBER.descriptionEntry,
                 "A machine that simulates the birth of a star originating from an accumulation of interstellar matter.");
         addLang(MekUtMachines.SMALL_DIGITAL_ASSEMBLER.descriptionEntry,

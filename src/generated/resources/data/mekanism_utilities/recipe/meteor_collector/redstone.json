@@ -1,0 +1,46 @@
+{
+  "type": "mekanism_utilities:meteor_collector",
+  "crop": {
+    "count": 1,
+    "tag": "c:dusts/redstone"
+  },
+  "duration": 2000,
+  "fertilizer": {
+    "amount": 1000000,
+    "fluid": "mekanismgenerators:fusion_fuel"
+  },
+  "output": [
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:redstone_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:deepslate_redstone_ore"
+      }
+    },
+    {
+      "chance": 0.9,
+      "value": {
+        "count": 1,
+        "id": "minecraft:coal_ore"
+      }
+    },
+    {
+      "chance": 0.9,
+      "value": {
+        "count": 1,
+        "id": "minecraft:deepslate_coal_ore"
+      }
+    }
+  ],
+  "soil": {
+    "count": 1,
+    "item": "minecraft:stone"
+  }
+}

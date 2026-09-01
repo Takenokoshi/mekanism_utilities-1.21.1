@@ -49,6 +49,7 @@ public class MekUtRecipeProvider extends RecipeProvider {
         LazerCompressNucleoSynthesizeRecipes.build(output);
         MekReactionRecipes.build(output);
         MetallurgicInfusingRecipes.build(output);
+        MeteorCollectorRecipes.build(output);
         MaterialProcessRecipes.build(output, RecipeProvider::has);
         PaintingRecipes.build(output);
         PigmentExtractingRecipes.build(output);

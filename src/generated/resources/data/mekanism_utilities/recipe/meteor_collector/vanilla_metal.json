@@ -1,0 +1,60 @@
+{
+  "type": "mekanism_utilities:meteor_collector",
+  "crop": {
+    "count": 1,
+    "tag": "c:dusts/iron"
+  },
+  "duration": 2000,
+  "fertilizer": {
+    "amount": 1000000,
+    "fluid": "mekanismgenerators:fusion_fuel"
+  },
+  "output": [
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:iron_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:deepslate_iron_ore"
+      }
+    },
+    {
+      "chance": 0.6,
+      "value": {
+        "count": 1,
+        "id": "minecraft:copper_ore"
+      }
+    },
+    {
+      "chance": 0.6,
+      "value": {
+        "count": 1,
+        "id": "minecraft:deepslate_copper_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:gold_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:deepslate_gold_ore"
+      }
+    }
+  ],
+  "soil": {
+    "count": 1,
+    "item": "minecraft:stone"
+  }
+}

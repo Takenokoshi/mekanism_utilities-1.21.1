@@ -1,0 +1,41 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 10,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_utilities:compact_fusion_reactor"
+    },
+    {
+      "count": 8,
+      "item": "mekanism_utilities:comet_control_circuit"
+    },
+    {
+      "count": 16,
+      "item": "mekanism_utilities:stardust_alloy"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 64,
+      "item": "mekanism:dynamic_tank"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:teleportation_core"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_utilities:meteor_collector"
+  }
+}

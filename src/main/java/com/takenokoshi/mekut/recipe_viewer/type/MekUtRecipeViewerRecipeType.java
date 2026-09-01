@@ -46,6 +46,12 @@ public class MekUtRecipeViewerRecipeType {
             MekUtRecipeTypes.LAZER_COMPRESS, -3, -3, 170, 80,
             MekUtMachines.LAZER_COMPRESS_NUCLEO_SYNTHESIZER);
 
+    public static final RVMekALRecipeTypeWrapper<?, GreenHouseRecipe, ?> METEOR_COLLECTOR = new RVMekALRecipeTypeWrapper<>(
+            MekUtConstants.rl(MekUtRecipeConstants.METEOR_COLLECTOR),
+            GreenHouseRecipe.class,
+            MekUtRecipeTypes.METEOR_COLLECTOR, -28, -10, 198, 60,
+            MekUtMachines.METEOR_COLLECTOR);
+
     public static final RVMekALRecipeTypeWrapper<?, ItemStackListFluidChemicalToItemRecipe, ?> SMALL_DIGITAL_ASSEMBLER = new RVMekALRecipeTypeWrapper<>(
             MekUtConstants.rl(MekUtRecipeConstants.SMALL_DIGITAL_ASSEMBLER),
             ItemStackListFluidChemicalToItemRecipe.class,

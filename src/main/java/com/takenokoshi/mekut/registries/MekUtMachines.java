@@ -36,6 +36,7 @@ import com.takenokoshi.mekut.blockentity.machine.BECompactThermalEvaporationPlan
 import com.takenokoshi.mekut.blockentity.machine.BEGreenHouse;
 import com.takenokoshi.mekut.blockentity.machine.BEIceMaker;
 import com.takenokoshi.mekut.blockentity.machine.BELazerCompressNucleoSynthesizer;
+import com.takenokoshi.mekut.blockentity.machine.BEMeteorCollector;
 import com.takenokoshi.mekut.blockentity.machine.BEPyrolysisMachine;
 import com.takenokoshi.mekut.blockentity.machine.BESmallDigitalAssembler;
 import com.takenokoshi.mekut.blockentity.machine.BESmallDigitalReactionChamber;
@@ -207,6 +208,22 @@ public class MekUtMachines {
                                     MekanismConfig.storage.antiprotonicNucleosynthesizer)
                             .withSound(MekanismSounds.ANTIPROTONIC_NUCLEOSYNTHESIZER)
                             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING));
+
+    public static final GuiSizedMachineRegistryObject<BEMeteorCollector> METEOR_COLLECTOR = MACHINES
+            .registerGuiSized("meteor_collector",
+                    BEAbstractGreenHouse.SIDE_CONFIG,
+                    BEAbstractGreenHouse.getContainerAdder(1_000_000)::accept,
+                    BEMeteorCollector::new,
+                    BEMeteorCollector.class,
+                    builder -> builder
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.FLUID, TransmissionType.ENERGY)
+                            .withEnergyConfig(
+                                    MekanismConfig.usage.antiprotonicNucleosynthesizer,
+                                    MekanismConfig.storage.antiprotonicNucleosynthesizer)
+                            .withSupportedUpgrades(Upgrade.MUFFLING)
+                            .with(AttributeCustomSelectionBox.JSON)
+                            .withBounding(new GreenHouseHandleBoundingBlock())
+                            .withCustomShape(MekUtBlockShapes.METEOR_COLLECTOR));
 
     public static final SimpleMachineRegistryObject<BEPyrolysisMachine> PYROLYSIS_MACHINE = MACHINES
             .registerSimple("pyrolysis_machine",

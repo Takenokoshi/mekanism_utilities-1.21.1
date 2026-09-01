@@ -34,6 +34,7 @@ public class MekUtScreens {
         registerMachineGui(event, MekUtMachines.ICE_MAKER, GuiFluidToObjectMachine<BEIceMaker>::new);
         registerMachineGui(event, MekUtMachines.LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
                 GuiBiChemicalToChemicalMachine<BELazerCompressNucleoSynthesizer>::new);
+        registerMachineGui(event, MekUtMachines.METEOR_COLLECTOR, GuiGreenHouse<BEMeteorCollector>::new);
         registerMachineGui(event, MekUtMachines.PYROLYSIS_MACHINE, GuiPyrolysisMachine<BEPyrolysisMachine>::new);
         registerMachineGui(event, MekUtMachines.SMALL_DIGITAL_ASSEMBLER,
                 GuiSmallDigitalAssembler<BESmallDigitalAssembler>::new);

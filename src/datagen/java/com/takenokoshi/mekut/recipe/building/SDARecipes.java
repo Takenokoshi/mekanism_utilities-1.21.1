@@ -251,5 +251,16 @@ public class SDARecipes {
                 .addCondition(new ModLoadedCondition(MekanismExtras.MOD_ID))
                 .build(output, MekUtConstants
                         .rl("small_digital_assembler/compact_naquadah_reactor"));
+        ItemStackListFluidChemicalToItemRecipeBuilder
+        .smallDigitalAssembler(new ItemStack(MekUtMachines.METEOR_COLLECTOR,1))
+        .addItemInput(MekUtMachines.COMPACT_FUSION_REACTOR,1)
+        .addItemInput(MekUtItems.COMET_CONTROL_CIRCUIT,8)
+        .addItemInput(MekUtItems.STARDUST_ALLOY,16)
+        .addItemInput(MekanismBlocks.STEEL_CASING,4)
+        .addItemInput(MekanismBlocks.DYNAMIC_TANK,64)
+        .addItemInput(MekanismItems.TELEPORTATION_CORE,16)
+        .setFluidInput(MekanismFluids.HEAVY_WATER.asStack(1000))
+        .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(10L))
+        .build(output, MekUtConstants.rl("small_digital_assembler/meteor_collector"));
     }
 }

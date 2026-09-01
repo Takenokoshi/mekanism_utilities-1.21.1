@@ -1,0 +1,74 @@
+{
+  "type": "mekanism_utilities:meteor_collector",
+  "crop": {
+    "count": 1,
+    "tag": "c:dusts/diamond"
+  },
+  "duration": 2000,
+  "fertilizer": {
+    "amount": 1000000,
+    "fluid": "mekanismgenerators:fusion_fuel"
+  },
+  "output": [
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:diamond_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:deepslate_diamond_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:emerald_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:deepslate_emerald_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:lapis_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "minecraft:deepslate_lapis_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:fluorite_ore"
+      }
+    },
+    {
+      "chance": 0.3,
+      "value": {
+        "count": 1,
+        "id": "mekanism:deepslate_fluorite_ore"
+      }
+    }
+  ],
+  "soil": {
+    "count": 1,
+    "item": "minecraft:stone"
+  }
+}
